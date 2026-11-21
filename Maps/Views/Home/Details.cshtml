@@ -1,0 +1,234 @@
+﻿@model Maps.Models.SpeciesViewModel
+@{
+    ViewData["Title"] = Model.OccurrenceData.Species;
+}
+
+<div class="container py-4" style="max-width: 1300px;">
+
+    <!-- Barre de Navigation Supérieure (Retour + Précédent/Suivant) -->
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div>
+            <a asp-action="Index" class="btn btn-outline-secondary btn-sm px-3">
+                <i class="bi bi-arrow-left"></i> Retour au tableau
+            </a>
+        </div>
+        <div class="btn-group shadow-sm">
+            @if (Model.PreviousSpecies != null)
+            {
+                <a asp-action="Details" asp-route-name="@Model.PreviousSpecies" class="btn btn-outline-dark btn-sm px-3">
+                    ← Précédent
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary btn-sm px-3" disabled>← Précédent</button>
+            }
+
+            @if (Model.NextSpecies != null)
+            {
+                <a asp-action="Details" asp-route-name="@Model.NextSpecies" class="btn btn-outline-dark btn-sm px-3">
+                    Suivant →
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary btn-sm px-3" disabled>Suivant →</button>
+            }
+        </div>
+    </div>
+
+    <!-- En-tête Espèce -->
+    <div class="row align-items-center mb-4">
+        <div class="col-md-7">
+            <h2 class="fw-bold fst-italic text-dark mb-1">@Model.OccurrenceData.Species</h2>
+            <p class="text-muted small mb-0">
+                Occurrences uniques enregistrées : <span class="fw-semibold text-dark">@Model.OccurrenceData.UniqueOccurrences</span>
+            </p>
+        </div>
+        <div class="col-md-5 text-md-end mt-3 mt-md-0 d-flex justify-content-md-end align-items-center gap-3">
+            @if (Model.CurrentSelectedThreshold != "none" && !string.IsNullOrEmpty(Model.CurrentSelectedThreshold))
+            {
+                <span class="badge bg-success bg-opacity-10 text-success border border-success px-3 py-2 fs-6">
+                    <i class="bi bi-check-circle-fill"></i> Seuil : @Model.CurrentSelectedThreshold
+                </span>
+            }
+            else
+            {
+                <span class="badge bg-light text-secondary border px-3 py-2 fs-6">Aucun seuil validé</span>
+            }
+
+            <!-- Bouton pour ouvrir le Popup de Commentaire -->
+            <button type="button" class="btn btn-outline-dark btn-sm d-flex align-items-center gap-2 px-3 py-2" data-bs-toggle="modal" data-bs-target="#commentModal">
+                <i class="bi bi-chat-text-fill"></i>
+                @(string.IsNullOrEmpty(Model.CurrentComment) ? "Nouveau" : "Voir/modifier")
+            </button>
+        </div>
+    </div>
+
+    <!-- Formulaire Unique caché (Utilisé pour la sélection des seuils et l'envoi du popup de commentaire) -->
+    <form asp-action="SaveChoice" method="post" id="evaluationForm">
+        <input type="hidden" name="speciesName" value="@Model.OccurrenceData.Species" />
+        <input type="hidden" name="selectedThreshold" id="selectedThresholdInput" value="@Model.CurrentSelectedThreshold" />
+        <input type="hidden" name="comment" id="commentInputHidden" value="@Model.CurrentComment" />
+    </form>
+
+    <!-- FENÊTRE MODALE (POPUP) POUR LE COMMENTAIRE MULTILINE -->
+    <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header bg-light border-0 py-3">
+                    <h5 class="modal-title fw-bold text-dark fs-6" id="commentModalLabel">
+                        <i class="bi bi-chat-quote-fill me-2 text-secondary"></i> Commentaire pour : <span class="fst-italic">@Model.OccurrenceData.Species</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+@*                         <label for="modalCommentTextarea" class="form-label small text-secondary fw-semibold text-uppercase">Votre observation (multiligne) :</label> *@
+                        <textarea class="form-control border shadow-none" id="modalCommentTextarea" rows="5" placeholder="Saisir vos remarques ici...">@Model.CurrentComment</textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 bg-light py-3">
+                    <button type="button" class="btn btn-outline-secondary btn-sm px-3" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-dark btn-sm px-4" id="saveCommentBtn">Enregistrer le commentaire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (!Model.HasThresholds)
+    {
+        <div class="alert alert-warning text-small py-2 mb-4">
+            <i class="bi bi-exclamation-triangle"></i> Cette espèce possède moins de 30 occurrences. Les cartes de seuils ne sont pas disponibles.
+        </div>
+    }
+
+    <!-- GRILLE 2x2 DES CARTES -->
+    <div class="row g-4">
+        <!-- 1. CARTE OCCURRENCES (Référence) -->
+        <div class="col-md-6">
+            <div class="card border shadow-sm h-100">
+                <div class="card-header bg-light py-2 px-3 d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold small text-uppercase text-secondary">1. Carte d'Occurrences</span>
+                </div>
+                <div class="card-body text-center p-3 bg-white d-flex align-items-center justify-content-center" style="min-height: 320px;">
+                    <a href="@Model.OccurrenceImage" target="_blank" title="Agrandir l'image">
+                        <img src="@Model.OccurrenceImage" class="img-fluid rounded border shadow-xs" style="max-height: 300px; object-fit: contain;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. CARTE SEUIL 10% -->
+        <div class="col-md-6">
+            <div class="card border shadow-sm h-100 @(Model.HasThresholds ? "" : "opacity-50")">
+                <div class="card-header bg-light py-2 px-3 d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold small text-uppercase text-secondary">2. Seuil 10 %</span>
+                    @if (Model.HasThresholds)
+                    {
+                        bool isSelected = Model.CurrentSelectedThreshold == "10pct";
+                        <button type="button" class="btn btn-sm @(isSelected ? "btn-success" : "btn-outline-success") select-threshold-btn" data-threshold="10pct">
+                            @(isSelected ? "✓ Validé" : "Sélectionner ce seuil")
+                        </button>
+                    }
+                </div>
+                <div class="card-body text-center p-3 bg-white d-flex align-items-center justify-content-center" style="min-height: 320px;">
+                    @if (Model.HasThresholds)
+                    {
+                        <a href="@Model.Seuil10Image" target="_blank" title="Agrandir l'image">
+                            <img src="@Model.Seuil10Image" class="img-fluid rounded border shadow-xs" style="max-height: 300px; object-fit: contain;" />
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="text-muted small">Non disponible</span>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. CARTE SEUIL 20% -->
+        <div class="col-md-6">
+            <div class="card border shadow-sm h-100 @(Model.HasThresholds ? "" : "opacity-50")">
+                <div class="card-header bg-light py-2 px-3 d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold small text-uppercase text-secondary">3. Seuil 20 %</span>
+                    @if (Model.HasThresholds)
+                    {
+                        bool isSelected = Model.CurrentSelectedThreshold == "20pct";
+                        <button type="button" class="btn btn-sm @(isSelected ? "btn-success" : "btn-outline-success") select-threshold-btn" data-threshold="20pct">
+                            @(isSelected ? "✓ Validé" : "Sélectionner ce seuil")
+                        </button>
+                    }
+                </div>
+                <div class="card-body text-center p-3 bg-white d-flex align-items-center justify-content-center" style="min-height: 320px;">
+                    @if (Model.HasThresholds)
+                    {
+                        <a href="@Model.Seuil20Image" target="_blank" title="Agrandir l'image">
+                            <img src="@Model.Seuil20Image" class="img-fluid rounded border shadow-xs" style="max-height: 300px; object-fit: contain;" />
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="text-muted small">Non disponible</span>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. CARTE SEUIL 30% -->
+        <div class="col-md-6">
+            <div class="card border shadow-sm h-100 @(Model.HasThresholds ? "" : "opacity-50")">
+                <div class="card-header bg-light py-2 px-3 d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold small text-uppercase text-secondary">4. Seuil 30 %</span>
+                    @if (Model.HasThresholds)
+                    {
+                        bool isSelected = Model.CurrentSelectedThreshold == "30pct";
+                        <button type="button" class="btn btn-sm @(isSelected ? "btn-success" : "btn-outline-success") select-threshold-btn" data-threshold="30pct">
+                            @(isSelected ? "✓ Validé" : "Sélectionner ce seuil")
+                        </button>
+                    }
+                </div>
+                <div class="card-body text-center p-3 bg-white d-flex align-items-center justify-content-center" style="min-height: 320px;">
+                    @if (Model.HasThresholds)
+                    {
+                        <a href="@Model.Seuil30Image" target="_blank" title="Agrandir l'image">
+                            <img src="@Model.Seuil30Image" class="img-fluid rounded border shadow-xs" style="max-height: 300px; object-fit: contain;" />
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="text-muted small">Non disponible</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts JavaScript -->
+@section Scripts {
+    <script>
+        // 1. Gestion de la sélection des seuils
+        document.querySelectorAll('.select-threshold-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const threshold = this.getAttribute('data-threshold');
+                document.getElementById('selectedThresholdInput').value = threshold;
+
+                // Conserver le commentaire actuel dans l'input caché lors de la soumission
+                const currentComment = document.getElementById('modalCommentTextarea').value;
+                document.getElementById('commentInputHidden').value = currentComment;
+
+                document.getElementById('evaluationForm').submit();
+            });
+        });
+
+        // 2. Gestion de l'enregistrement du commentaire depuis le Popup
+        document.getElementById('saveCommentBtn').addEventListener('click', function() {
+            const commentText = document.getElementById('modalCommentTextarea').value;
+            document.getElementById('commentInputHidden').value = commentText;
+
+            // Soumettre le formulaire
+            document.getElementById('evaluationForm').submit();
+        });
+    </script>
+}

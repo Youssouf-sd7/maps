@@ -1,0 +1,560 @@
+[
+  {
+    "species": "Adansonia digitata L ",
+    "file": "Adansonia_digitata_L__BF.csv",
+    "total_occurrences": 428,
+    "unique_occurrences": 349
+  },
+  {
+    "species": "Allophylus spicatus",
+    "file": "Allophylus_spicatus_BF.csv",
+    "total_occurrences": 24,
+    "unique_occurrences": 24
+  },
+  {
+    "species": "Andira inermis",
+    "file": "Andira_inermis_BF.csv",
+    "total_occurrences": 15,
+    "unique_occurrences": 13
+  },
+  {
+    "species": "Annona senegalensis",
+    "file": "Annona_senegalensis_BF.csv",
+    "total_occurrences": 440,
+    "unique_occurrences": 286
+  },
+  {
+    "species": "Balanites aegyptiaca",
+    "file": "Balanites_aegyptiaca_BF.csv",
+    "total_occurrences": 828,
+    "unique_occurrences": 617
+  },
+  {
+    "species": "Berlinia grandiflora",
+    "file": "Berlinia_grandiflora_BF.csv",
+    "total_occurrences": 307,
+    "unique_occurrences": 33
+  },
+  {
+    "species": "Bombax costatum",
+    "file": "Bombax_costatum_BF.csv",
+    "total_occurrences": 328,
+    "unique_occurrences": 264
+  },
+  {
+    "species": "Borassus aethiopum",
+    "file": "Borassus_aethiopum_BF.csv",
+    "total_occurrences": 36,
+    "unique_occurrences": 31
+  },
+  {
+    "species": "Borassus akeassii",
+    "file": "Borassus_akeassii_BF.csv",
+    "total_occurrences": 15,
+    "unique_occurrences": 13
+  },
+  {
+    "species": "Boscia salicifolia",
+    "file": "Boscia_salicifolia_BF.csv",
+    "total_occurrences": 61,
+    "unique_occurrences": 41
+  },
+  {
+    "species": "Boscia senegalensis",
+    "file": "Boscia_senegalensis_BF.csv",
+    "total_occurrences": 251,
+    "unique_occurrences": 213
+  },
+  {
+    "species": "Bridelia scleroneura",
+    "file": "Bridelia_scleroneura_BF.csv",
+    "total_occurrences": 134,
+    "unique_occurrences": 89
+  },
+  {
+    "species": "Calotropis procera",
+    "file": "Calotropis_procera_BF.csv",
+    "total_occurrences": 107,
+    "unique_occurrences": 96
+  },
+  {
+    "species": "Canarium schweinfurthii",
+    "file": "Canarium_schweinfurthii_BF.csv",
+    "total_occurrences": 6,
+    "unique_occurrences": 4
+  },
+  {
+    "species": "Carapa procera",
+    "file": "Carapa_procera_BF.csv",
+    "total_occurrences": 35,
+    "unique_occurrences": 18
+  },
+  {
+    "species": "Carissa edulis",
+    "file": "Carissa_edulis_BF.csv",
+    "total_occurrences": 32,
+    "unique_occurrences": 20
+  },
+  {
+    "species": "Cola laurifolia",
+    "file": "Cola_laurifolia_BF.csv",
+    "total_occurrences": 845,
+    "unique_occurrences": 83
+  },
+  {
+    "species": "Combretum aculeatum",
+    "file": "Combretum_aculeatum_BF.csv",
+    "total_occurrences": 470,
+    "unique_occurrences": 343
+  },
+  {
+    "species": "Commiphora africana",
+    "file": "Commiphora_africana_BF.csv",
+    "total_occurrences": 274,
+    "unique_occurrences": 212
+  },
+  {
+    "species": "Cordyla pinnata",
+    "file": "Cordyla_pinnata_BF.csv",
+    "total_occurrences": 13,
+    "unique_occurrences": 7
+  },
+  {
+    "species": "Crateva adansonii",
+    "file": "Crateva_adansonii_BF.csv",
+    "total_occurrences": 93,
+    "unique_occurrences": 46
+  },
+  {
+    "species": "Crossopteryx febrifuga",
+    "file": "Crossopteryx_febrifuga_BF.csv",
+    "total_occurrences": 471,
+    "unique_occurrences": 314
+  },
+  {
+    "species": "Dalbergia melanoxylon",
+    "file": "Dalbergia_melanoxylon_BF.csv",
+    "total_occurrences": 126,
+    "unique_occurrences": 101
+  },
+  {
+    "species": "Detarium macrocarpum",
+    "file": "Detarium_macrocarpum_BF.csv",
+    "total_occurrences": 21,
+    "unique_occurrences": 19
+  },
+  {
+    "species": "Diospyros elliotii",
+    "file": "Diospyros_elliotii_BF.csv",
+    "total_occurrences": 11,
+    "unique_occurrences": 6
+  },
+  {
+    "species": "Diospyros mespiliformis",
+    "file": "Diospyros_mespiliformis_BF.csv",
+    "total_occurrences": 1089,
+    "unique_occurrences": 396
+  },
+  {
+    "species": "Elaeis guineensis",
+    "file": "Elaeis_guineensis_BF.csv",
+    "total_occurrences": 94,
+    "unique_occurrences": 25
+  },
+  {
+    "species": "Entada africana",
+    "file": "Entada_africana_BF.csv",
+    "total_occurrences": 338,
+    "unique_occurrences": 252
+  },
+  {
+    "species": "Feretia apodanthera",
+    "file": "Feretia_apodanthera_BF.csv",
+    "total_occurrences": 432,
+    "unique_occurrences": 299
+  },
+  {
+    "species": "Ficus dicranostyla",
+    "file": "Ficus_dicranostyla_BF.csv",
+    "total_occurrences": 12,
+    "unique_occurrences": 11
+  },
+  {
+    "species": "Ficus glumosa",
+    "file": "Ficus_glumosa_BF.csv",
+    "total_occurrences": 59,
+    "unique_occurrences": 46
+  },
+  {
+    "species": "Ficus sur",
+    "file": "Ficus_sur_BF.csv",
+    "total_occurrences": 94,
+    "unique_occurrences": 53
+  },
+  {
+    "species": "Ficus trichopoda",
+    "file": "Ficus_trichopoda_BF.csv",
+    "total_occurrences": 15,
+    "unique_occurrences": 10
+  },
+  {
+    "species": "Ficus vallis choudae",
+    "file": "Ficus_vallis_choudae_BF.csv",
+    "total_occurrences": 61,
+    "unique_occurrences": 8
+  },
+  {
+    "species": "Flacourtia flavescens",
+    "file": "Flacourtia_flavescens_BF.csv",
+    "total_occurrences": 60,
+    "unique_occurrences": 47
+  },
+  {
+    "species": "Flueggea virosa",
+    "file": "Flueggea_virosa_BF.csv",
+    "total_occurrences": 296,
+    "unique_occurrences": 207
+  },
+  {
+    "species": "Gardenia aqualla",
+    "file": "Gardenia_aqualla_BF.csv",
+    "total_occurrences": 85,
+    "unique_occurrences": 63
+  },
+  {
+    "species": "Gardenia erubescens",
+    "file": "Gardenia_erubescens_BF.csv",
+    "total_occurrences": 329,
+    "unique_occurrences": 250
+  },
+  {
+    "species": "Gardenia sokotensis",
+    "file": "Gardenia_sokotensis_BF.csv",
+    "total_occurrences": 86,
+    "unique_occurrences": 76
+  },
+  {
+    "species": "Gardenia ternifolia",
+    "file": "Gardenia_ternifolia_BF.csv",
+    "total_occurrences": 232,
+    "unique_occurrences": 190
+  },
+  {
+    "species": "Grewia barteri",
+    "file": "Grewia_barteri_BF.csv",
+    "total_occurrences": 16,
+    "unique_occurrences": 12
+  },
+  {
+    "species": "Grewia bicolor",
+    "file": "Grewia_bicolor_BF.csv",
+    "total_occurrences": 315,
+    "unique_occurrences": 249
+  },
+  {
+    "species": "Grewia flavescens",
+    "file": "Grewia_flavescens_BF.csv",
+    "total_occurrences": 111,
+    "unique_occurrences": 89
+  },
+  {
+    "species": "Grewia lasiodiscus",
+    "file": "Grewia_lasiodiscus_BF.csv",
+    "total_occurrences": 112,
+    "unique_occurrences": 79
+  },
+  {
+    "species": "Grewia tenax",
+    "file": "Grewia_tenax_BF.csv",
+    "total_occurrences": 45,
+    "unique_occurrences": 30
+  },
+  {
+    "species": "Grewia villosa",
+    "file": "Grewia_villosa_BF.csv",
+    "total_occurrences": 51,
+    "unique_occurrences": 42
+  },
+  {
+    "species": "Guiera senegalensis",
+    "file": "Guiera_senegalensis_BF.csv",
+    "total_occurrences": 865,
+    "unique_occurrences": 639
+  },
+  {
+    "species": "Hexalobus monopetalus",
+    "file": "Hexalobus_monopetalus_BF.csv",
+    "total_occurrences": 82,
+    "unique_occurrences": 47
+  },
+  {
+    "species": "Hymenocardia acida",
+    "file": "Hymenocardia_acida_BF.csv",
+    "total_occurrences": 84,
+    "unique_occurrences": 70
+  },
+  {
+    "species": "Hyphaene thebaica",
+    "file": "Hyphaene_thebaica_BF.csv",
+    "total_occurrences": 41,
+    "unique_occurrences": 39
+  },
+  {
+    "species": "Isoberlinia doka",
+    "file": "Isoberlinia_doka_BF.csv",
+    "total_occurrences": 193,
+    "unique_occurrences": 140
+  },
+  {
+    "species": "Khaya senegalensis",
+    "file": "Khaya_senegalensis_BF.csv",
+    "total_occurrences": 584,
+    "unique_occurrences": 216
+  },
+  {
+    "species": "Landolphia heudelotii",
+    "file": "Landolphia_heudelotii_BF.csv",
+    "total_occurrences": 39,
+    "unique_occurrences": 30
+  },
+  {
+    "species": "Lannea acida",
+    "file": "Lannea_acida_BF.csv",
+    "total_occurrences": 655,
+    "unique_occurrences": 469
+  },
+  {
+    "species": "Lannea barteri",
+    "file": "Lannea_barteri_BF.csv",
+    "total_occurrences": 26,
+    "unique_occurrences": 23
+  },
+  {
+    "species": "Lannea microcarpa",
+    "file": "Lannea_microcarpa_BF.csv",
+    "total_occurrences": 296,
+    "unique_occurrences": 229
+  },
+  {
+    "species": "Lannea velutina",
+    "file": "Lannea_velutina_BF.csv",
+    "total_occurrences": 125,
+    "unique_occurrences": 78
+  },
+  {
+    "species": "Leptadenia pyrotechnica",
+    "file": "Leptadenia_pyrotechnica_BF.csv",
+    "total_occurrences": 51,
+    "unique_occurrences": 36
+  },
+  {
+    "species": "Lophira lanceolata",
+    "file": "Lophira_lanceolata_BF.csv",
+    "total_occurrences": 28,
+    "unique_occurrences": 26
+  },
+  {
+    "species": "Maerua angolensis",
+    "file": "Maerua_angolensis_BF.csv",
+    "total_occurrences": 66,
+    "unique_occurrences": 54
+  },
+  {
+    "species": "Manilkara multinervis",
+    "file": "Manilkara_multinervis_BF.csv",
+    "total_occurrences": 46,
+    "unique_occurrences": 36
+  },
+  {
+    "species": "Maranthes polyandra",
+    "file": "Maranthes_polyandra_BF.csv",
+    "total_occurrences": 81,
+    "unique_occurrences": 51
+  },
+  {
+    "species": "Margaritaria discoidea",
+    "file": "Margaritaria_discoidea_BF.csv",
+    "total_occurrences": 24,
+    "unique_occurrences": 19
+  },
+  {
+    "species": "Oncoba spinosa",
+    "file": "Oncoba_spinosa_BF.csv",
+    "total_occurrences": 41,
+    "unique_occurrences": 24
+  },
+  {
+    "species": "Opilia amentacea",
+    "file": "Opilia_amentacea_BF.csv",
+    "total_occurrences": 64,
+    "unique_occurrences": 59
+  },
+  {
+    "species": "Parinari curatellifolia",
+    "file": "Parinari_curatellifolia_BF.csv",
+    "total_occurrences": 94,
+    "unique_occurrences": 72
+  },
+  {
+    "species": "Parkia bicolor",
+    "file": "Parkia_bicolor_BF.csv",
+    "total_occurrences": 1,
+    "unique_occurrences": 1
+  },
+  {
+    "species": "Piliostigma reticulatum",
+    "file": "Piliostigma_reticulatum_BF.csv",
+    "total_occurrences": 994,
+    "unique_occurrences": 690
+  },
+  {
+    "species": "Piliostigma thonningii",
+    "file": "Piliostigma_thonningii_BF.csv",
+    "total_occurrences": 876,
+    "unique_occurrences": 426
+  },
+  {
+    "species": "Pterocarpus erinaceus",
+    "file": "Pterocarpus_erinaceus_BF.csv",
+    "total_occurrences": 630,
+    "unique_occurrences": 332
+  },
+  {
+    "species": "Pterocarpus lucens",
+    "file": "Pterocarpus_lucens_BF.csv",
+    "total_occurrences": 323,
+    "unique_occurrences": 258
+  },
+  {
+    "species": "Quassia undulata",
+    "file": "Quassia_undulata_BF.csv",
+    "total_occurrences": 42,
+    "unique_occurrences": 34
+  },
+  {
+    "species": "Saba senegalensis",
+    "file": "Saba_senegalensis_BF.csv",
+    "total_occurrences": 536,
+    "unique_occurrences": 182
+  },
+  {
+    "species": "Sarcocephalus latifolius",
+    "file": "Sarcocephalus_latifolius_BF.csv",
+    "total_occurrences": 290,
+    "unique_occurrences": 164
+  },
+  {
+    "species": "Sclerocarya birrea",
+    "file": "Sclerocarya_birrea_BF.csv",
+    "total_occurrences": 469,
+    "unique_occurrences": 359
+  },
+  {
+    "species": "Securidaca longipedunculata",
+    "file": "Securidaca_longipedunculata_BF.csv",
+    "total_occurrences": 102,
+    "unique_occurrences": 96
+  },
+  {
+    "species": "Senegalia erythrocalyx",
+    "file": "Senegalia_erythrocalyx_BF.csv",
+    "total_occurrences": 226,
+    "unique_occurrences": 66
+  },
+  {
+    "species": "Senegalia macrostachya",
+    "file": "Senegalia_macrostachya_BF.csv",
+    "total_occurrences": 562,
+    "unique_occurrences": 407
+  },
+  {
+    "species": "Senegalia senegal",
+    "file": "Senegalia_senegal_BF.csv",
+    "total_occurrences": 101,
+    "unique_occurrences": 89
+  },
+  {
+    "species": "Sorindeia juglandifolia",
+    "file": "Sorindeia_juglandifolia_BF.csv",
+    "total_occurrences": 21,
+    "unique_occurrences": 10
+  },
+  {
+    "species": "Sterculia setigera",
+    "file": "Sterculia_setigera_BF.csv",
+    "total_occurrences": 307,
+    "unique_occurrences": 243
+  },
+  {
+    "species": "Strychnos innocua",
+    "file": "Strychnos_innocua_BF.csv",
+    "total_occurrences": 122,
+    "unique_occurrences": 90
+  },
+  {
+    "species": "Strychnos spinosa",
+    "file": "Strychnos_spinosa_BF.csv",
+    "total_occurrences": 296,
+    "unique_occurrences": 207
+  },
+  {
+    "species": "Tamarindus indica",
+    "file": "Tamarindus_indica_BF.csv",
+    "total_occurrences": 375,
+    "unique_occurrences": 263
+  },
+  {
+    "species": "Trichilia emetica",
+    "file": "Trichilia_emetica_BF.csv",
+    "total_occurrences": 79,
+    "unique_occurrences": 61
+  },
+  {
+    "species": "Uvaria chamae",
+    "file": "Uvaria_chamae_BF.csv",
+    "total_occurrences": 50,
+    "unique_occurrences": 25
+  },
+  {
+    "species": "Vitellaria paradoxa",
+    "file": "Vitellaria_paradoxa_BF.csv",
+    "total_occurrences": 1360,
+    "unique_occurrences": 1010
+  },
+  {
+    "species": "Vitex chrysocarpa",
+    "file": "Vitex_chrysocarpa_BF.csv",
+    "total_occurrences": 133,
+    "unique_occurrences": 51
+  },
+  {
+    "species": "Voacanga africana",
+    "file": "Voacanga_africana_BF.csv",
+    "total_occurrences": 3,
+    "unique_occurrences": 3
+  },
+  {
+    "species": "Ximenia americana",
+    "file": "Ximenia_americana_BF.csv",
+    "total_occurrences": 388,
+    "unique_occurrences": 309
+  },
+  {
+    "species": "Ziziphus abyssinica",
+    "file": "Ziziphus_abyssinica_BF.csv",
+    "total_occurrences": 37,
+    "unique_occurrences": 31
+  },
+  {
+    "species": "Ziziphus mauritiana",
+    "file": "Ziziphus_mauritiana_BF.csv",
+    "total_occurrences": 439,
+    "unique_occurrences": 338
+  },
+  {
+    "species": "Ziziphus spina christi",
+    "file": "Ziziphus_spina_christi_BF.csv",
+    "total_occurrences": 21,
+    "unique_occurrences": 20
+  }
+]
